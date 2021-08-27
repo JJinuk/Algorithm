@@ -1,5 +1,0 @@
-# Algorithm
----
-# python
----
-# swift
