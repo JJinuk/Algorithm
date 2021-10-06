@@ -3,6 +3,8 @@ array = [3, 31, 48, 73, 8, 11, 20, 29, 65, 15]
 
 
 def shell_sort(array):
+    gap = len(array) // 3 + 1                               # gap 초기화
+
     while gap > 0:
         i = 0
         j = gap
@@ -24,9 +26,8 @@ def shell_sort(array):
                     array[k - gap], array[k] = array[k], array[k - gap]
                 k -= 1
 
-
         gap //= 3
-    gap = len(array) // 3 + 1                               # gap 초기화
+
 
 
 
