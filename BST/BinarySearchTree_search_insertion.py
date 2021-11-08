@@ -6,6 +6,18 @@ class Node:
         self.right = None
         self.val = key
 
+# search 함수
+# 루트가 null이거나 키가 있을 때
+def search(root, key):
+    if root is None or root.val == key:
+        return root
+
+# 키가 루트의 키 값보다 클 때
+    if root.val < key:
+        return search(root.right, key)
+# 키가 루트의 키 값보다 작을 때
+    return search(root.left, key)
+
 # insert 함수
 # 키를 가진 새 노드
 
