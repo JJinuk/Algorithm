@@ -1,8 +1,13 @@
+# BST 개별 노드
+
 class Node:
     def __init__(self, key):
         self.left = None
         self.right = None
         self.val = key
+
+# insert 함수
+# 키를 가진 새 노드
 
 def insert(root, key):
     if root is None:
@@ -17,6 +22,7 @@ def insert(root, key):
 
     return root
 
+# 중위순회 함수
 def inorder(root):
     if root:
         inorder(root.left)
