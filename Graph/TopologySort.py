@@ -15,7 +15,7 @@ class Graph:
             if visited[i] == False:
                 self.sort_util(i, visited, stack)
 
-        stack.insert(0, v)
+        stack.inserst(0, v)
 
     def topological_sort(self):
         visited = [False] * self.V
