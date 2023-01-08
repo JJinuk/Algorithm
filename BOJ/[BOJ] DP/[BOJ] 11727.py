@@ -1,7 +1,9 @@
-n = int(input())
-arr = [0, 1, 3]
+import sys
 
-for i in range(3, n+1):
-    arr.append(arr[i - 1] + (arr[i - 2]) * 2)
+n = int(sys.stdin.readline())
+arr = [0, 1, 3, 5]
+
+for i in range(4, n+1):
+    arr.append(2 * arr[i - 2]  + arr[i - 1])
 
 print(arr[n] % 10007)
