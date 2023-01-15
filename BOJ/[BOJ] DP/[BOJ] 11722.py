@@ -2,13 +2,11 @@ import sys
 
 N = int(sys.stdin.readline())
 A = list(map(int, sys.stdin.readline().split()))
-dp = [x for x in A]
+dp = [1] * N
 
 for i in range(N):
     for j in range(i):
-        if A[i] > A[j]:
-            dp[i] = max(dp[i], dp[j]+A[i])
-        else:
-            dp[i] = max(dp[i], A[i])
+        if A[i] < A[j]:
+            dp[i] = max(dp[i], dp[j]+1)
 
 print(max(dp))
