@@ -1,13 +1,13 @@
 import sys
 
 text = list(sys.stdin.readline().strip())
-buffer = []  # Initialize the buffer list as empty
+buffer = []
 n = int(sys.stdin.readline())
 
 for _ in range(n):
     cmd = sys.stdin.readline().split()
     if text:
-        buffer.append(text.pop())
+            buffer.append(text.pop())
     elif cmd[0] == "D":
         if buffer:
             text.append(buffer.pop())
